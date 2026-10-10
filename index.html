@@ -5,26 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Panel de Operaciones</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-        <style>
-            .card-ojba {
-                max-width: 320px !important;
-            }
-
-            .gap {
-                gap: 1rem;
-            }
-        </style>
     </head>
 
     <body>
         <header>
-            <nav class="navbar" role="navigation" aria-label="main navigation">
+            <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a class="navbar-item has-text-weight-bold" href="#">
-                        Distribuidora Central
+                        Panel de Operaciones
                     </a>
 
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menuPrincipal">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -32,281 +23,288 @@
                     </a>
                 </div>
 
-                <div id="navbarBasicExample" class="navbar-menu">
+                <div id="menuPrincipal" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item">
-                            Panel
-                        </a>
-
-                        <a class="navbar-item">
-                            Ventas
-                        </a>
+                        <a class="navbar-item is-selected">Dashboard</a>
+                        <a class="navbar-item">Transacciones</a>
+                        <a class="navbar-item">Inventario</a>
 
                         <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">
-                                More
-                            </a>
-
+                            <a class="navbar-link">Reportes</a>
                             <div class="navbar-dropdown">
-                                <a class="navbar-item">
-                                    Inventario
-                                </a>
-                                <a class="navbar-item">
-                                    Personal
-                                </a>
-                                <a class="navbar-item">
-                                    Bitácora
-                                </a>
+                                <a class="navbar-item">Ventas</a>
+                                <a class="navbar-item">Operaciones</a>
                                 <hr class="navbar-divider">
-                                <a class="navbar-item">
-                                    Report an issue
-                                </a>
+                                <a class="navbar-item">Reportar incidencia</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="navbar-end">
                         <div class="navbar-item">
-                            <div class="buttons">
-                                <a class="button is-primary">
-                                    <strong>Mi perfil</strong>
-                                </a>
-                                <a class="button is-light">
-                                    Salir
-                                </a>
-                            </div>
+                            <span class="tag is-info is-light">Usuario interno: Supervisor</span>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
 
-        <main>
-            <section class="hero is-medium is-info">
-                <div class="hero-body">
-                    <div class="container">
-                        <div class="columns is-vcentered">
-                            <div class="column is-half">
-                                <p class="title is-1">Panel de Control</p>
-                                <p class="subtitle is-3">Monitoreo de operaciones en tiempo real</p>
-                            </div>
-                            <div class="column is-half">
-                                <figure class="image">
-                                    <img src="https://bulma.io/assets/images/placeholders/1280x960.png"
-                                        alt="Vista general de la operación"
-                                        class="is-rounded" />
-                                </figure>
-                            </div>
+        <main class="container is-fluid py-5">
+
+            <section class="level">
+                <div class="level-left">
+                    <div class="level-item">
+                        <div>
+                            <h1 class="title is-4">Monitoreo de operaciones</h1>
+                            <p class="subtitle is-6">Resumen del día · 09/10/2026</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="level-right">
+                    <div class="level-item">
+                        <div class="buttons">
+                            <a class="button is-small is-link">Hoy</a>
+                            <a class="button is-small is-light">Semana</a>
+                            <a class="button is-small is-light">Mes</a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="container is-max-desktop mt-6">
-                <h2 class="title is-3">Indicadores de hoy</h2>
-                <div class="columns is-multiline">
-                    <div class="column is-3-desktop is-6-tablet">
-                        <div class="box has-text-centered">
-                            <p class="heading">Pedidos</p>
-                            <p class="title is-3">1,284</p>
-                            <span class="tag is-success">+8% vs. ayer</span>
-                        </div>
+            <section class="columns is-multiline">
+                <div class="column is-6-tablet is-3-desktop">
+                    <div class="box">
+                        <p class="heading">Ingresos del día</p>
+                        <p class="title is-3">L 184,250</p>
+                        <span class="tag is-success">+8.2% vs ayer</span>
                     </div>
-                    <div class="column is-3-desktop is-6-tablet">
-                        <div class="box has-text-centered">
-                            <p class="heading">Ingresos</p>
-                            <p class="title is-3">L 184,520</p>
-                            <span class="tag is-success">+3% vs. ayer</span>
-                        </div>
+                </div>
+                <div class="column is-6-tablet is-3-desktop">
+                    <div class="box">
+                        <p class="heading">Transacciones</p>
+                        <p class="title is-3">342</p>
+                        <span class="tag is-success">+15 vs ayer</span>
                     </div>
-                    <div class="column is-3-desktop is-6-tablet">
-                        <div class="box has-text-centered">
-                            <p class="heading">Empleados activos</p>
-                            <p class="title is-3">24</p>
-                            <span class="tag is-info">2 de vacaciones</span>
-                        </div>
+                </div>
+                <div class="column is-6-tablet is-3-desktop">
+                    <div class="box">
+                        <p class="heading">Tickets pendientes</p>
+                        <p class="title is-3">18</p>
+                        <span class="tag is-warning">Requiere atención</span>
                     </div>
-                    <div class="column is-3-desktop is-6-tablet">
-                        <div class="box has-text-centered">
-                            <p class="heading">Incidencias</p>
-                            <p class="title is-3">7</p>
-                            <span class="tag is-danger">2 urgentes</span>
-                        </div>
+                </div>
+                <div class="column is-6-tablet is-3-desktop">
+                    <div class="box">
+                        <p class="heading">Disponibilidad de sistemas</p>
+                        <p class="title is-3">99.2%</p>
+                        <span class="tag is-danger">1 servicio caído</span>
                     </div>
                 </div>
             </section>
 
-            <section class="container is-max-desktop my-6">
-                <h2 class="title is-3">Estado de las sucursales</h2>
-                <div class="is-flex is-flex-wrap-wrap is-justify-content-center gap">
-                    <div class="card card-ojba">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Sucursal Tegucigalpa" />
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <p class="title is-4">Tegucigalpa</p>
-                            <p class="subtitle is-6">Sede central</p>
-                            <div class="content">
-                                Pedidos de hoy: 420
-                                <progress class="progress is-info" value="84" max="100">84%</progress>
-                                <span class="tag is-success">Operativa</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card card-ojba">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Sucursal San Pedro Sula" />
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <p class="title is-4">San Pedro Sula</p>
-                            <p class="subtitle is-6">Zona norte</p>
-                            <div class="content">
-                                Pedidos de hoy: 310
-                                <progress class="progress is-warning" value="62" max="100">62%</progress>
-                                <span class="tag is-warning">Mantenimiento</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card card-ojba">
-                        <div class="card-image">
-                            <figure class="image is-4by3">
-                                <img src="https://bulma.io/assets/images/placeholders/1280x960.png" alt="Sucursal La Ceiba" />
-                            </figure>
-                        </div>
-                        <div class="card-content">
-                            <p class="title is-4">La Ceiba</p>
-                            <p class="subtitle is-6">Zona costa</p>
-                            <div class="content">
-                                Pedidos de hoy: 554
-                                <progress class="progress is-danger" value="95" max="100">95%</progress>
-                                <span class="tag is-danger">Casi al límite</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container is-max-desktop my-6">
-                <h2 class="title is-3">Ventas recientes</h2>
-                <div class="box">
-                    <div class="field has-addons mb-4">
-                        <div class="control is-expanded">
-                            <input id="buscador" class="input" type="text" placeholder="Buscar por cliente o tipo de pedido">
-                        </div>
-                        <div class="control">
-                            <div class="select">
-                                <select id="filtroEstado">
-                                    <option value="">Todos</option>
-                                    <option value="Pagado">Pagado</option>
-                                    <option value="Pendiente">Pendiente</option>
-                                    <option value="Cancelado">Cancelado</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="table-container">
-                        <table class="table is-fullwidth is-striped is-hoverable">
-                            <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Cliente</th>
-                                    <th>Pedido</th>
-                                    <th>Monto (L)</th>
-                                    <th>Estado</th>
-                                </tr>
-                            </thead>
-                            <tbody id="tablaVentas">
-                                <tr>
-                                    <td>V-001</td>
-                                    <td>Comercial Rodríguez</td>
-                                    <td>Mayorista</td>
-                                    <td>8,850.00</td>
-                                    <td><span class="tag is-success">Pagado</span></td>
-                                </tr>
-                                <tr>
-                                    <td>V-002</td>
-                                    <td>Colegio San Miguel</td>
-                                    <td>Institucional</td>
-                                    <td>3,200.00</td>
-                                    <td><span class="tag is-warning">Pendiente</span></td>
-                                </tr>
-                                <tr>
-                                    <td>V-003</td>
-                                    <td>Carlos Mejía</td>
-                                    <td>Minorista</td>
-                                    <td>200.00</td>
-                                    <td><span class="tag is-success">Pagado</span></td>
-                                </tr>
-                                <tr>
-                                    <td>V-004</td>
-                                    <td>Ana Flores</td>
-                                    <td>Minorista</td>
-                                    <td>450.00</td>
-                                    <td><span class="tag is-danger">Cancelado</span></td>
-                                </tr>
-                                <tr>
-                                    <td>V-005</td>
-                                    <td>Abarrotería Lempira</td>
-                                    <td>Mayorista</td>
-                                    <td>5,400.00</td>
-                                    <td><span class="tag is-success">Pagado</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
-
-            <section class="container is-max-desktop my-6">
-                <h2 class="title is-3">Reportar incidencia</h2>
-                <article class="media">
-                    <figure class="media-left">
-                        <p class="image is-64x64">
-                            <img src="https://bulma.io/assets/images/placeholders/128x128.png" />
-                        </p>
-                    </figure>
-                    <div class="media-content">
-                        <div class="field">
-                            <p class="control">
-                                <textarea class="textarea" placeholder="Describí la incidencia..."></textarea>
-                            </p>
-                        </div>
-                        <nav class="level">
+            <section class="columns">
+                <div class="column is-8">
+                    <div class="box">
+                        <div class="level">
                             <div class="level-left">
-                                <div class="level-item">
-                                    <a class="button is-info">Enviar</a>
-                                </div>
+                                <h2 class="title is-5">Últimas transacciones</h2>
                             </div>
                             <div class="level-right">
-                                <div class="level-item">
-                                    <label class="checkbox">
-                                        <input type="checkbox" /> Marcar como urgente
-                                    </label>
-                                </div>
+                                <input id="buscar" class="input is-small" type="text" placeholder="Buscar transacción...">
                             </div>
-                        </nav>
+                        </div>
+
+                        <div class="table-container">
+                            <table class="table is-fullwidth is-striped is-hoverable">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Hora</th>
+                                        <th>Sucursal</th>
+                                        <th>Responsable</th>
+                                        <th class="has-text-right">Monto</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tabla-transacciones">
+                                    <tr>
+                                        <td>TRX-1042</td>
+                                        <td>09:15</td>
+                                        <td>Tegucigalpa</td>
+                                        <td>M. Flores</td>
+                                        <td class="has-text-right">L 12,500.00</td>
+                                        <td><span class="tag is-success">Completada</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-1043</td>
+                                        <td>09:32</td>
+                                        <td>San Pedro Sula</td>
+                                        <td>C. Reyes</td>
+                                        <td class="has-text-right">L 8,340.50</td>
+                                        <td><span class="tag is-warning">Pendiente</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-1044</td>
+                                        <td>10:05</td>
+                                        <td>La Ceiba</td>
+                                        <td>J. Mejía</td>
+                                        <td class="has-text-right">L 3,120.00</td>
+                                        <td><span class="tag is-success">Completada</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-1045</td>
+                                        <td>10:40</td>
+                                        <td>Tegucigalpa</td>
+                                        <td>L. Pineda</td>
+                                        <td class="has-text-right">L 21,900.00</td>
+                                        <td><span class="tag is-danger">Rechazada</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-1046</td>
+                                        <td>11:12</td>
+                                        <td>Choluteca</td>
+                                        <td>R. Valle</td>
+                                        <td class="has-text-right">L 5,780.25</td>
+                                        <td><span class="tag is-success">Completada</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>TRX-1047</td>
+                                        <td>11:48</td>
+                                        <td>San Pedro Sula</td>
+                                        <td>C. Reyes</td>
+                                        <td class="has-text-right">L 15,430.00</td>
+                                        <td><span class="tag is-warning">Pendiente</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </article>
+                </div>
+
+                <div class="column is-4">
+                    <div class="box">
+                        <h2 class="title is-5">Indicadores de rendimiento</h2>
+
+                        <p class="is-size-7">Cumplimiento de meta mensual (78%)</p>
+                        <progress class="progress is-primary" value="78" max="100">78%</progress>
+
+                        <p class="is-size-7">Pedidos despachados a tiempo (92%)</p>
+                        <progress class="progress is-success" value="92" max="100">92%</progress>
+
+                        <p class="is-size-7">Inventario en nivel crítico (35%)</p>
+                        <progress class="progress is-warning" value="35" max="100">35%</progress>
+
+                        <p class="is-size-7">Tasa de errores (4%)</p>
+                        <progress class="progress is-danger" value="4" max="100">4%</progress>
+                    </div>
+                </div>
             </section>
 
-            <section class="container is-max-desktop my-6">
-                <h2 class="title is-3">Áreas de la empresa</h2>
-                <div class="grid">
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Recepción</p><span class="tag is-success">Normal</span></div></div>
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Bodega Norte</p><span class="tag is-success">Normal</span></div></div>
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Bodega Sur</p><span class="tag is-danger">Saturada</span></div></div>
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Despacho</p><span class="tag is-warning">Mantenimiento</span></div></div>
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Oficinas</p><span class="tag is-success">Normal</span></div></div>
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Taller</p><span class="tag is-success">Normal</span></div></div>
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Estacionamiento</p><span class="tag is-warning">Casi lleno</span></div></div>
-                    <div class="cell"><div class="box has-text-centered"><p class="title is-5">Seguridad</p><span class="tag is-success">Normal</span></div></div>
+            <section class="columns">
+                <div class="column is-6">
+                    <div class="box">
+                        <h2 class="title is-5">Ventas por sucursal (% del total)</h2>
+
+                        <div class="level is-mobile mb-1">
+                            <div class="level-left"><span class="is-size-7">Tegucigalpa</span></div>
+                            <div class="level-right"><strong class="is-size-7">45%</strong></div>
+                        </div>
+                        <progress class="progress is-link" value="45" max="100">45%</progress>
+
+                        <div class="level is-mobile mb-1">
+                            <div class="level-left"><span class="is-size-7">San Pedro Sula</span></div>
+                            <div class="level-right"><strong class="is-size-7">32%</strong></div>
+                        </div>
+                        <progress class="progress is-link" value="32" max="100">32%</progress>
+
+                        <div class="level is-mobile mb-1">
+                            <div class="level-left"><span class="is-size-7">La Ceiba</span></div>
+                            <div class="level-right"><strong class="is-size-7">15%</strong></div>
+                        </div>
+                        <progress class="progress is-link" value="15" max="100">15%</progress>
+
+                        <div class="level is-mobile mb-1">
+                            <div class="level-left"><span class="is-size-7">Choluteca</span></div>
+                            <div class="level-right"><strong class="is-size-7">8%</strong></div>
+                        </div>
+                        <progress class="progress is-link" value="8" max="100">8%</progress>
+                    </div>
+                </div>
+
+                <div class="column is-6">
+                    <div class="box">
+                        <h2 class="title is-5">Estado de sistemas</h2>
+                        <div class="table-container">
+                            <table class="table is-fullwidth">
+                                <thead>
+                                    <tr>
+                                        <th>Servicio</th>
+                                        <th>Última revisión</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Base de datos</td>
+                                        <td>Hace 1 min</td>
+                                        <td><span class="tag is-success">Operativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facturación</td>
+                                        <td>Hace 2 min</td>
+                                        <td><span class="tag is-success">Operativo</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Pasarela de pagos</td>
+                                        <td>Hace 5 min</td>
+                                        <td><span class="tag is-warning">Lento</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Servidor de correo</td>
+                                        <td>Hace 12 min</td>
+                                        <td><span class="tag is-danger">Caído</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="box">
+                <h2 class="title is-5">Sitio comercial vs. sitio empresarial</h2>
+                <div class="table-container">
+                    <table class="table is-fullwidth is-bordered">
+                        <thead>
+                            <tr>
+                                <th>Aspecto</th>
+                                <th>Sitio comercial</th>
+                                <th>Sitio empresarial (este dashboard)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Enfoque</strong></td>
+                                <td>Atraer visitantes y vender</td>
+                                <td>Monitorear operaciones y transacciones</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Usuario</strong></td>
+                                <td>Cliente externo</td>
+                                <td>Personal interno de la empresa</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contenido</strong></td>
+                                <td>Imágenes, promociones, textos de venta</td>
+                                <td>Tablas, KPIs e indicadores de rendimiento</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Estética</strong></td>
+                                <td>Llamativa y decorativa</td>
+                                <td>Funcional, limpia, con jerarquía para los datos</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
         </main>
@@ -314,8 +312,7 @@
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
-                    <strong>Distribuidora Central</strong> © 2026.
-                    Panel de uso interno.
+                    <strong>Panel de Operaciones</strong> · Uso interno · © 2026
                 </p>
             </div>
         </footer>
@@ -335,24 +332,13 @@
                     });
                 });
 
-                const buscador = document.getElementById('buscador');
-                const filtroEstado = document.getElementById('filtroEstado');
-                const filas = document.querySelectorAll('#tablaVentas tr');
-
-                function filtrar() {
-                    const texto = buscador.value.toLowerCase();
-                    const estado = filtroEstado.value;
-
-                    filas.forEach(fila => {
-                        const coincideTexto = fila.textContent.toLowerCase().includes(texto);
-                        const estadoFila = fila.querySelector('.tag').textContent;
-                        const coincideEstado = estado === '' || estadoFila === estado;
-                        fila.style.display = (coincideTexto && coincideEstado) ? '' : 'none';
+                document.getElementById('buscar').addEventListener('input', (e) => {
+                    const texto = e.target.value.toLowerCase();
+                    document.querySelectorAll('#tabla-transacciones tr').forEach(fila => {
+                        fila.style.display = fila.textContent.toLowerCase().includes(texto) ? '' : 'none';
                     });
-                }
+                });
 
-                buscador.addEventListener('input', filtrar);
-                filtroEstado.addEventListener('change', filtrar);
             });
         </script>
     </body>

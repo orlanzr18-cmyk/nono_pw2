@@ -9,13 +9,13 @@
 
     <body>
         <header>
-            <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+            <nav class="navbar" role="navigation" aria-label="main navigation">
                 <div class="navbar-brand">
                     <a class="navbar-item has-text-weight-bold" href="#">
                         Panel de Operaciones
                     </a>
 
-                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="menuPrincipal">
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
@@ -23,296 +23,144 @@
                     </a>
                 </div>
 
-                <div id="menuPrincipal" class="navbar-menu">
+                <div id="navbarBasicExample" class="navbar-menu">
                     <div class="navbar-start">
-                        <a class="navbar-item is-selected">Dashboard</a>
-                        <a class="navbar-item">Transacciones</a>
-                        <a class="navbar-item">Inventario</a>
-
-                        <div class="navbar-item has-dropdown is-hoverable">
-                            <a class="navbar-link">Reportes</a>
-                            <div class="navbar-dropdown">
-                                <a class="navbar-item">Ventas</a>
-                                <a class="navbar-item">Operaciones</a>
-                                <hr class="navbar-divider">
-                                <a class="navbar-item">Reportar incidencia</a>
-                            </div>
-                        </div>
+                        <a class="navbar-item">
+                            Dashboard
+                        </a>
+                        <a class="navbar-item">
+                            Transacciones
+                        </a>
+                        <a class="navbar-item">
+                            Reportes
+                        </a>
                     </div>
 
                     <div class="navbar-end">
                         <div class="navbar-item">
-                            <span class="tag is-info is-light">Usuario interno: Supervisor</span>
+                            <span class="tag is-info is-light">Usuario interno</span>
                         </div>
                     </div>
                 </div>
             </nav>
         </header>
 
-        <main class="container is-fluid py-5">
+        <main>
+            <section class="container is-max-desktop mt-5">
+                <h1 class="title is-3">Monitoreo de operaciones</h1>
+                <p class="subtitle is-6">Resumen del día</p>
+            </section>
 
-            <section class="level">
-                <div class="level-left">
-                    <div class="level-item">
-                        <div>
-                            <h1 class="title is-4">Monitoreo de operaciones</h1>
-                            <p class="subtitle is-6">Resumen del día · 09/10/2026</p>
+            <section class="container is-max-desktop my-5">
+                <div class="grid">
+                    <div class="cell">
+                        <div class="box has-text-centered">
+                            <p class="heading">Ventas del día</p>
+                            <p class="title is-4">L 184,250</p>
+                            <span class="tag is-success">+8%</span>
                         </div>
                     </div>
-                </div>
-                <div class="level-right">
-                    <div class="level-item">
-                        <div class="buttons">
-                            <a class="button is-small is-link">Hoy</a>
-                            <a class="button is-small is-light">Semana</a>
-                            <a class="button is-small is-light">Mes</a>
+                    <div class="cell">
+                        <div class="box has-text-centered">
+                            <p class="heading">Transacciones</p>
+                            <p class="title is-4">342</p>
+                            <span class="tag is-success">+15</span>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="box has-text-centered">
+                            <p class="heading">Pendientes</p>
+                            <p class="title is-4">18</p>
+                            <span class="tag is-warning">Revisar</span>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="box has-text-centered">
+                            <p class="heading">Errores</p>
+                            <p class="title is-4">4</p>
+                            <span class="tag is-danger">Atender</span>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="columns is-multiline">
-                <div class="column is-6-tablet is-3-desktop">
-                    <div class="box">
-                        <p class="heading">Ingresos del día</p>
-                        <p class="title is-3">L 184,250</p>
-                        <span class="tag is-success">+8.2% vs ayer</span>
-                    </div>
-                </div>
-                <div class="column is-6-tablet is-3-desktop">
-                    <div class="box">
-                        <p class="heading">Transacciones</p>
-                        <p class="title is-3">342</p>
-                        <span class="tag is-success">+15 vs ayer</span>
-                    </div>
-                </div>
-                <div class="column is-6-tablet is-3-desktop">
-                    <div class="box">
-                        <p class="heading">Tickets pendientes</p>
-                        <p class="title is-3">18</p>
-                        <span class="tag is-warning">Requiere atención</span>
-                    </div>
-                </div>
-                <div class="column is-6-tablet is-3-desktop">
-                    <div class="box">
-                        <p class="heading">Disponibilidad de sistemas</p>
-                        <p class="title is-3">99.2%</p>
-                        <span class="tag is-danger">1 servicio caído</span>
-                    </div>
-                </div>
+            <section class="container is-max-desktop my-5">
+                <h2 class="title is-4">Últimas transacciones</h2>
+                <table class="table is-fullwidth is-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Sucursal</th>
+                            <th>Responsable</th>
+                            <th>Monto</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TRX-1042</td>
+                            <td>Tegucigalpa</td>
+                            <td>M. Flores</td>
+                            <td>L 12,500.00</td>
+                            <td><span class="tag is-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td>TRX-1043</td>
+                            <td>San Pedro Sula</td>
+                            <td>C. Reyes</td>
+                            <td>L 8,340.50</td>
+                            <td><span class="tag is-warning">Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>TRX-1044</td>
+                            <td>La Ceiba</td>
+                            <td>J. Mejía</td>
+                            <td>L 3,120.00</td>
+                            <td><span class="tag is-success">Completada</span></td>
+                        </tr>
+                        <tr>
+                            <td>TRX-1045</td>
+                            <td>Tegucigalpa</td>
+                            <td>L. Pineda</td>
+                            <td>L 21,900.00</td>
+                            <td><span class="tag is-danger">Rechazada</span></td>
+                        </tr>
+                        <tr>
+                            <td>TRX-1046</td>
+                            <td>Choluteca</td>
+                            <td>R. Valle</td>
+                            <td>L 5,780.25</td>
+                            <td><span class="tag is-success">Completada</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </section>
 
-            <section class="columns">
-                <div class="column is-8">
-                    <div class="box">
-                        <div class="level">
-                            <div class="level-left">
-                                <h2 class="title is-5">Últimas transacciones</h2>
-                            </div>
-                            <div class="level-right">
-                                <input id="buscar" class="input is-small" type="text" placeholder="Buscar transacción...">
-                            </div>
-                        </div>
-
-                        <div class="table-container">
-                            <table class="table is-fullwidth is-striped is-hoverable">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Hora</th>
-                                        <th>Sucursal</th>
-                                        <th>Responsable</th>
-                                        <th class="has-text-right">Monto</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tabla-transacciones">
-                                    <tr>
-                                        <td>TRX-1042</td>
-                                        <td>09:15</td>
-                                        <td>Tegucigalpa</td>
-                                        <td>M. Flores</td>
-                                        <td class="has-text-right">L 12,500.00</td>
-                                        <td><span class="tag is-success">Completada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>TRX-1043</td>
-                                        <td>09:32</td>
-                                        <td>San Pedro Sula</td>
-                                        <td>C. Reyes</td>
-                                        <td class="has-text-right">L 8,340.50</td>
-                                        <td><span class="tag is-warning">Pendiente</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>TRX-1044</td>
-                                        <td>10:05</td>
-                                        <td>La Ceiba</td>
-                                        <td>J. Mejía</td>
-                                        <td class="has-text-right">L 3,120.00</td>
-                                        <td><span class="tag is-success">Completada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>TRX-1045</td>
-                                        <td>10:40</td>
-                                        <td>Tegucigalpa</td>
-                                        <td>L. Pineda</td>
-                                        <td class="has-text-right">L 21,900.00</td>
-                                        <td><span class="tag is-danger">Rechazada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>TRX-1046</td>
-                                        <td>11:12</td>
-                                        <td>Choluteca</td>
-                                        <td>R. Valle</td>
-                                        <td class="has-text-right">L 5,780.25</td>
-                                        <td><span class="tag is-success">Completada</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>TRX-1047</td>
-                                        <td>11:48</td>
-                                        <td>San Pedro Sula</td>
-                                        <td>C. Reyes</td>
-                                        <td class="has-text-right">L 15,430.00</td>
-                                        <td><span class="tag is-warning">Pendiente</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column is-4">
-                    <div class="box">
-                        <h2 class="title is-5">Indicadores de rendimiento</h2>
-
-                        <p class="is-size-7">Cumplimiento de meta mensual (78%)</p>
-                        <progress class="progress is-primary" value="78" max="100">78%</progress>
-
-                        <p class="is-size-7">Pedidos despachados a tiempo (92%)</p>
+            <section class="container is-max-desktop my-5">
+                <h2 class="title is-4">Rendimiento</h2>
+                <div class="columns">
+                    <div class="column is-half">
+                        <p>Meta mensual (78%)</p>
+                        <progress class="progress is-info" value="78" max="100">78%</progress>
+                        <p>Pedidos despachados (92%)</p>
                         <progress class="progress is-success" value="92" max="100">92%</progress>
-
-                        <p class="is-size-7">Inventario en nivel crítico (35%)</p>
+                    </div>
+                    <div class="column is-half">
+                        <p>Inventario crítico (35%)</p>
                         <progress class="progress is-warning" value="35" max="100">35%</progress>
-
-                        <p class="is-size-7">Tasa de errores (4%)</p>
+                        <p>Tasa de errores (4%)</p>
                         <progress class="progress is-danger" value="4" max="100">4%</progress>
                     </div>
                 </div>
             </section>
 
-            <section class="columns">
-                <div class="column is-6">
-                    <div class="box">
-                        <h2 class="title is-5">Ventas por sucursal (% del total)</h2>
-
-                        <div class="level is-mobile mb-1">
-                            <div class="level-left"><span class="is-size-7">Tegucigalpa</span></div>
-                            <div class="level-right"><strong class="is-size-7">45%</strong></div>
-                        </div>
-                        <progress class="progress is-link" value="45" max="100">45%</progress>
-
-                        <div class="level is-mobile mb-1">
-                            <div class="level-left"><span class="is-size-7">San Pedro Sula</span></div>
-                            <div class="level-right"><strong class="is-size-7">32%</strong></div>
-                        </div>
-                        <progress class="progress is-link" value="32" max="100">32%</progress>
-
-                        <div class="level is-mobile mb-1">
-                            <div class="level-left"><span class="is-size-7">La Ceiba</span></div>
-                            <div class="level-right"><strong class="is-size-7">15%</strong></div>
-                        </div>
-                        <progress class="progress is-link" value="15" max="100">15%</progress>
-
-                        <div class="level is-mobile mb-1">
-                            <div class="level-left"><span class="is-size-7">Choluteca</span></div>
-                            <div class="level-right"><strong class="is-size-7">8%</strong></div>
-                        </div>
-                        <progress class="progress is-link" value="8" max="100">8%</progress>
-                    </div>
-                </div>
-
-                <div class="column is-6">
-                    <div class="box">
-                        <h2 class="title is-5">Estado de sistemas</h2>
-                        <div class="table-container">
-                            <table class="table is-fullwidth">
-                                <thead>
-                                    <tr>
-                                        <th>Servicio</th>
-                                        <th>Última revisión</th>
-                                        <th>Estado</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Base de datos</td>
-                                        <td>Hace 1 min</td>
-                                        <td><span class="tag is-success">Operativo</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Facturación</td>
-                                        <td>Hace 2 min</td>
-                                        <td><span class="tag is-success">Operativo</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Pasarela de pagos</td>
-                                        <td>Hace 5 min</td>
-                                        <td><span class="tag is-warning">Lento</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Servidor de correo</td>
-                                        <td>Hace 12 min</td>
-                                        <td><span class="tag is-danger">Caído</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="box">
-                <h2 class="title is-5">Sitio comercial vs. sitio empresarial</h2>
-                <div class="table-container">
-                    <table class="table is-fullwidth is-bordered">
-                        <thead>
-                            <tr>
-                                <th>Aspecto</th>
-                                <th>Sitio comercial</th>
-                                <th>Sitio empresarial (este dashboard)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Enfoque</strong></td>
-                                <td>Atraer visitantes y vender</td>
-                                <td>Monitorear operaciones y transacciones</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Usuario</strong></td>
-                                <td>Cliente externo</td>
-                                <td>Personal interno de la empresa</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Contenido</strong></td>
-                                <td>Imágenes, promociones, textos de venta</td>
-                                <td>Tablas, KPIs e indicadores de rendimiento</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Estética</strong></td>
-                                <td>Llamativa y decorativa</td>
-                                <td>Funcional, limpia, con jerarquía para los datos</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
         </main>
 
         <footer class="footer">
             <div class="content has-text-centered">
                 <p>
-                    <strong>Panel de Operaciones</strong> · Uso interno · © 2026
+                    <strong>Panel de Operaciones</strong> © 2026.
+                    Uso interno.
                 </p>
             </div>
         </footer>
@@ -324,18 +172,13 @@
 
                 $navbarBurgers.forEach(el => {
                     el.addEventListener('click', () => {
+
                         const target = el.dataset.target;
                         const $target = document.getElementById(target);
 
                         el.classList.toggle('is-active');
                         $target.classList.toggle('is-active');
-                    });
-                });
 
-                document.getElementById('buscar').addEventListener('input', (e) => {
-                    const texto = e.target.value.toLowerCase();
-                    document.querySelectorAll('#tabla-transacciones tr').forEach(fila => {
-                        fila.style.display = fila.textContent.toLowerCase().includes(texto) ? '' : 'none';
                     });
                 });
 
